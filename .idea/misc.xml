@@ -4,6 +4,14 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Nicolas/Documents/GitHub/Caritas-Application/app/src/main/res/layout/activity_main.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/Nicolas/Documents/GitHub/Caritas-Application/app/src/main/res/layout/donaciones.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Nicolas/Documents/GitHub/Caritas-Application/app/src/main/res/layout/editarperfil.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Nicolas/Documents/GitHub/Caritas-Application/app/src/main/res/layout/login.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Nicolas/Documents/GitHub/Caritas-Application/app/src/main/res/layout/menu.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Nicolas/Documents/GitHub/Caritas-Application/app/src/main/res/layout/menuinvitados.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Nicolas/Documents/GitHub/Caritas-Application/app/src/main/res/layout/paginaweb.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Nicolas/Documents/GitHub/Caritas-Application/app/src/main/res/layout/perfil.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Nicolas/Documents/GitHub/Caritas-Application/app/src/main/res/layout/restablecercontra.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>
