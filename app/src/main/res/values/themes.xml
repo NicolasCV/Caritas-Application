@@ -12,7 +12,11 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <!--
         <item name="android:windowBackground">#D1E0D7</item>
         <item name="android:windowBackground">#888B8D</item>
+        -->
+        <item name="android:fontFamily">@font/raleway</item>
+
     </style>
 </resources>
