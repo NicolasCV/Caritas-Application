@@ -49,7 +49,7 @@ class FeedFragment : Fragment() {
                 val channel = parser.getChannel(url)
                 //do something
                 title = view.findViewById(R.id.TextTitle)
-                title.text = channel.title
+                title.text = channel.link
             } catch (e: Exception) {
                 e.printStackTrace()
             }
