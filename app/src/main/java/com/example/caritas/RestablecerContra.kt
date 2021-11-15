@@ -13,10 +13,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [menu_invitados.newInstance] factory method to
+ * Use the [restablecer_contra.newInstance] factory method to
  * create an instance of this fragment.
  */
-class menu_invitados : Fragment() {
+class RestablecerContra : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -34,7 +34,7 @@ class menu_invitados : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_menu_invitados, container, false)
+        return inflater.inflate(R.layout.fragment_restablecer_contra, container, false)
     }
 
     companion object {
@@ -44,12 +44,12 @@ class menu_invitados : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment menu_invitados.
+         * @return A new instance of fragment restablecer_contra.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            menu_invitados().apply {
+            RestablecerContra().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

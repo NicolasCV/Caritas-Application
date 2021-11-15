@@ -16,7 +16,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [perfil_fragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class perfil_fragment : Fragment() {
+class PerfilFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -49,7 +49,7 @@ class perfil_fragment : Fragment() {
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            perfil_fragment().apply {
+            PerfilFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
