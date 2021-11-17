@@ -28,16 +28,11 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.google.android.material.snackbar.Snackbar
 import com.prof.rssparser.Channel
 import com.prof.rssparser.Parser
-
 import kotlinx.coroutines.launch
 import okhttp3.OkHttpClient
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-class FeedFragment : Fragment() {
+class EventsFragment : Fragment() {
 
     private lateinit var parser: Parser
     private lateinit var adapter: ArticleAdapter
@@ -60,9 +55,8 @@ class FeedFragment : Fragment() {
         OkHttpClient()
     }
 
-    private val url = "https://www.caritas.org.mx/feed"
-    //private val url = "https://www.caritas.org.mx/area/eventos/feed/"
-
+    //private val url = "https://www.caritas.org.mx/feed"
+    private val url = "https://www.caritas.org.mx/area/eventos/feed/"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -80,7 +74,7 @@ class FeedFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_feed, container, false)
+        return inflater.inflate(R.layout.fragment_events, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -122,7 +116,7 @@ class FeedFragment : Fragment() {
 
         fetchFeed(parser)
 
-        }
+    }
 
 
 
@@ -143,10 +137,4 @@ class FeedFragment : Fragment() {
         }
     }
 
-
 }
-
-
-
-
-
