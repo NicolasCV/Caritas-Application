@@ -26,8 +26,9 @@ class EditarPerfil : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        Navigation.findNavController(view).navigate(R.id.mainMenu)
+
         editar.setOnClickListener{
+            Navigation.findNavController(view).navigate(R.id.mainMenu)
         }
 
 
