@@ -3,26 +3,76 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
-
+    app:startDestination="@id/login">
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.example.caritas.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first" >
-
+        android:id="@+id/donacionesCaritas"
+        android:name="com.example.caritas.DonacionesCaritas"
+        android:label="fragment_donaciones_caritas"
+        tools:layout="@layout/fragment_donaciones_caritas" />
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.caritas.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/toGuestMenu"
+            app:destination="@id/menuInvitados" />
+        <action
+            android:id="@+id/toNormalMenu"
+            app:destination="@id/mainMenu" />
+        <action
+            android:id="@+id/toEditPassword"
+            app:destination="@id/restablecerContra" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.example.caritas.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second" >
-
+        android:id="@+id/editarPerfil"
+        android:name="com.example.caritas.EditarPerfil"
+        android:label="fragment_editar_perfil"
+        tools:layout="@layout/fragment_editar_perfil" >
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/toMenu"
+            app:destination="@id/mainMenu" />
     </fragment>
+    <fragment
+        android:id="@+id/perfilFragment"
+        android:name="com.example.caritas.PerfilFragment"
+        android:label="fragment_perfil_fragment"
+        tools:layout="@layout/fragment_perfil_fragment" >
+        <action
+            android:id="@+id/toEditarPerfil"
+            app:destination="@id/editarPerfil" />
+    </fragment>
+    <fragment
+        android:id="@+id/restablecerContra"
+        android:name="com.example.caritas.RestablecerContra"
+        android:label="fragment_restablecer_contra"
+        tools:layout="@layout/fragment_restablecer_contra" />
+    <fragment
+        android:id="@+id/mainMenu"
+        android:name="com.example.caritas.MainMenu"
+        android:label="fragment_main_menu"
+        tools:layout="@layout/fragment_main_menu" >
+        <action
+            android:id="@+id/toFeedFromNormal"
+            app:destination="@id/feedFragment" />
+        <action
+            android:id="@+id/toPerfil"
+            app:destination="@id/perfilFragment" />
+        <action
+            android:id="@+id/toDonaciones"
+            app:destination="@id/donacionesCaritas" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuInvitados"
+        android:name="com.example.caritas.MenuInvitados"
+        android:label="fragment_menu_invitados"
+        tools:layout="@layout/fragment_menu_invitados" >
+        <action
+            android:id="@+id/ToFeedFromGuest"
+            app:destination="@id/feedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/feedFragment"
+        android:name="com.example.caritas.FeedFragment"
+        android:label="FeedFragment" />
 </navigation>
