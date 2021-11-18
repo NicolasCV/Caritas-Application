@@ -23,7 +23,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentCont"
-        android:name="com.example.caritas.MainMenu"
+        android:name="com.example.caritas.Login"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
