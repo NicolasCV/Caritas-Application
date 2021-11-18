@@ -8,18 +8,24 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.commit
+import androidx.fragment.app.replace
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
 class Login : Fragment() {
     private lateinit var textView: TextView
+    private lateinit var ingresarBtn: Button
+    private lateinit var invitadoBtn: Button
+    private lateinit var recoveryBtn: Button
+    private lateinit var fragManager: FragmentManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        fragManager = parentFragmentManager
 
     }
 
@@ -33,6 +39,29 @@ class Login : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        ingresarBtn = view.findViewById(R.id.IngresarButton)
+        invitadoBtn = view.findViewById(R.id.invitadoButton)
+        recoveryBtn = view.findViewById(R.id.recoverButton)
+
+        ingresarBtn.setOnClickListener{
+            fragManager.commit{
+                replace<MainMenu>(R.id.fragmentCont)
+            }
+        }
+
+        invitadoBtn.setOnClickListener{
+            fragManager.commit{
+                replace<MenuInvitados>(R.id.fragmentCont)
+            }
+        }
+
+        recoveryBtn.setOnClickListener{
+            fragManager.commit{
+                replace<RestablecerContra>(R.id.fragmentCont)
+            }
+        }
+
         /*
         textView = findViewById(android.R.id.clickaqui)
         val spannableString = SpannableString(string)

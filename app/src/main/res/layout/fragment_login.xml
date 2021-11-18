@@ -80,7 +80,7 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
-        android:id="@+id/Ingresar"
+        android:id="@+id/IngresarButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -110,10 +110,10 @@
         android:text="Recuerda: Si es tu primera vez iniciando sesion, utiliza la contrasena que se te envio por correo \n\nSi no recuerdas tu contrasena:"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Ingresar" />
+        app:layout_constraintTop_toBottomOf="@+id/IngresarButton" />
 
     <Button
-        android:id="@+id/clickaqui"
+        android:id="@+id/recoverButton"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_marginStart="32dp"
@@ -129,7 +129,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <Button
-        android:id="@+id/invitado"
+        android:id="@+id/invitadoButton"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_marginTop="32dp"
@@ -143,6 +143,6 @@
         app:iconPadding="1dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/clickaqui" />
+        app:layout_constraintTop_toBottomOf="@+id/recoverButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
