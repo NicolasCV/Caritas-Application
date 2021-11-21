@@ -5,8 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.navigation.Navigation
-import kotlinx.android.synthetic.main.fragment_restablecer_contra.*
 import java.util.regex.Matcher
 import java.util.regex.Pattern
 
@@ -27,7 +27,9 @@ class RestablecerContra : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        Ingresar.setOnClickListener{
+        var ingresar : Button = view.findViewById(R.id.Ingresar)
+
+        ingresar.setOnClickListener{
             Navigation.findNavController(view).navigate(R.id.mainMenu)
         }
 

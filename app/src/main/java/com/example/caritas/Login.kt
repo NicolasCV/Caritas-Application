@@ -16,7 +16,6 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.navigation.Navigation
-import kotlinx.android.synthetic.main.fragment_login.*
 
 
 class Login : Fragment() {
@@ -46,15 +45,20 @@ class Login : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        Ingresar.setOnClickListener{
+        var ingresar : Button = view.findViewById(R.id.Ingresar)
+        var restContra : Button = view.findViewById(R.id.clickaqui)
+        var invi : Button = view.findViewById(R.id.invitado)
+
+
+        ingresar.setOnClickListener{
             Navigation.findNavController(view).navigate(R.id.mainMenu)
         }
 
-        clickaqui.setOnClickListener{
+        restContra.setOnClickListener{
             Navigation.findNavController(view).navigate(R.id.restablecerContra)
         }
 
-        invitado.setOnClickListener{
+        invi.setOnClickListener{
             Navigation.findNavController(view).navigate(R.id.menuInvitados)
         }
 

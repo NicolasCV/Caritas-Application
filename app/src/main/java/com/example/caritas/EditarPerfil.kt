@@ -5,7 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import kotlinx.android.synthetic.main.fragment_editar_perfil.*
+import android.widget.Button
 import androidx.navigation.Navigation
 
 class EditarPerfil : Fragment() {
@@ -26,8 +26,9 @@ class EditarPerfil : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        var edit : Button = view.findViewById(R.id.editar)
 
-        editar.setOnClickListener{
+        edit.setOnClickListener{
             Navigation.findNavController(view).navigate(R.id.mainMenu)
         }
 
