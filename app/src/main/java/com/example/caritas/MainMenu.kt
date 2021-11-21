@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import androidx.navigation.Navigation
 
 class MainMenu : Fragment() {
@@ -27,9 +28,9 @@ class MainMenu : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        var perfilBtn : Button = view.findViewById(R.id.perfilButton)
-        var infoBtn : Button = view.findViewById(R.id.infoButton)
-        var donacionesBtn : Button = view.findViewById(R.id.donacionesButton)
+        var perfilBtn : ImageView = view.findViewById(R.id.perfilButton)
+        var infoBtn : ImageView = view.findViewById(R.id.infoButton)
+        var donacionesBtn : ImageView = view.findViewById(R.id.donacionesButton)
 
         perfilBtn.setOnClickListener{
             Navigation.findNavController(view).navigate(R.id.perfilFragment)

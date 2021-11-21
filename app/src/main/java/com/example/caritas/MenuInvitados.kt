@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import androidx.navigation.Navigation
 
 class MenuInvitados : Fragment() {
@@ -27,7 +28,7 @@ class MenuInvitados : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        var infoBtn : Button = view.findViewById(R.id.infoButton)
+        var infoBtn : ImageView = view.findViewById(R.id.infoButton)
 
         infoBtn.setOnClickListener {
             Navigation.findNavController(view).navigate(R.id.feedFragment)
