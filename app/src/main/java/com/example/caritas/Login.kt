@@ -13,6 +13,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.TextView
 import androidx.navigation.Navigation
@@ -48,10 +49,26 @@ class Login : Fragment() {
         var ingresar : Button = view.findViewById(R.id.Ingresar)
         var restContra : Button = view.findViewById(R.id.clickaqui)
         var invi : Button = view.findViewById(R.id.invitado)
+        var recuerdame : CheckBox = view.findViewById(R.id.recordar)
+
+        emailForm = view.findViewById(R.id.correoInput)
+        contraForm = view.findViewById(R.id.contraInput)
+
+        loadValues()
+
+
+        if(emailForm.text.toString() != "" || contraForm.text.toString() != ""){
+            recuerdame.isChecked = true
+        }
 
 
         ingresar.setOnClickListener{
             Navigation.findNavController(view).navigate(R.id.mainMenu)
+
+            if(recuerdame.isChecked){
+                saveValues()
+            }
+
         }
 
         restContra.setOnClickListener{

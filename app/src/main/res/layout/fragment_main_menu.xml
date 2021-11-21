@@ -43,6 +43,17 @@
         app:layout_constraintTop_toBottomOf="@+id/donacionesButton" />
 
     <ImageButton
+        android:id="@+id/logout"
+        android:layout_width="190dp"
+        android:layout_height="187dp"
+        android:scaleType="fitCenter"
+        android:src="@android:drawable/ic_menu_revert"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.932"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/donacionesButton" />
+
+    <ImageButton
         android:id="@+id/donarButton"
         android:layout_width="190dp"
         android:layout_height="187dp"

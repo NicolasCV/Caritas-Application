@@ -1,5 +1,7 @@
 package com.example.caritas
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -31,6 +33,7 @@ class MainMenu : Fragment() {
         var perfilBtn : ImageView = view.findViewById(R.id.perfilButton)
         var infoBtn : ImageView = view.findViewById(R.id.infoButton)
         var donacionesBtn : ImageView = view.findViewById(R.id.donacionesButton)
+        var logoutBtn : ImageView = view.findViewById(R.id.logout)
 
         perfilBtn.setOnClickListener{
             Navigation.findNavController(view).navigate(R.id.perfilFragment)
@@ -42,6 +45,19 @@ class MainMenu : Fragment() {
 
         donacionesBtn.setOnClickListener{
             Navigation.findNavController(view).navigate(R.id.donacionesCaritas)
+        }
+
+        logoutBtn.setOnClickListener{
+
+            var pref : SharedPreferences = requireActivity().getPreferences(Context.MODE_PRIVATE);
+            val editor = pref.edit()
+
+            editor.putString("email","")
+            editor.putString("contra","")
+
+            editor.commit()
+
+            Navigation.findNavController(view).navigate(R.id.login)
         }
 
     }
