@@ -12,10 +12,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.CheckBox
-import android.widget.EditText
-import android.widget.TextView
+import android.widget.*
 import androidx.navigation.Navigation
 
 
@@ -63,12 +60,19 @@ class Login : Fragment() {
 
 
         ingresar.setOnClickListener{
-            Navigation.findNavController(view).navigate(R.id.mainMenu)
 
-            if(recuerdame.isChecked){
-                saveValues()
+            if(contraForm.text.toString() != "" && isValidEmail(emailForm.text.toString())){
+
+                if(recuerdame.isChecked){
+                    saveValues()
+                }
+
+                Navigation.findNavController(view).navigate(R.id.mainMenu)
             }
 
+            else{
+                Toast.makeText(activity, "Correo o contrasena invalidos", Toast.LENGTH_SHORT).show()
+            }
         }
 
         restContra.setOnClickListener{
@@ -108,12 +112,9 @@ class Login : Fragment() {
         editor.commit()
     }
 
-    fun isValidEmail(target: CharSequence?): Boolean {
-        return if (target == null) {
-            false
-        } else {
-            Patterns.EMAIL_ADDRESS.matcher(target).matches()
-        }
+
+    private fun isValidEmail(email: String?): Boolean {
+        return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
     }
 
 }

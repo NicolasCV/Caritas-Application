@@ -2,6 +2,7 @@ package com.example.caritas
 
 import android.content.Context
 import android.os.Bundle
+import android.text.TextUtils
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -40,8 +41,8 @@ class RestablecerContra : Fragment() {
 
             input = inputForm.text.toString()
 
-            if(!isValidPassword(input)){
-                Toast.makeText(activity, "Must be a valid password = Needs a symbols and an uppercase letter", Toast.LENGTH_LONG).show()
+            if(!isValidEmail(input)){
+                Toast.makeText(activity, "Debe ser un correo valido", Toast.LENGTH_SHORT).show()
             }
 
             else{
@@ -52,12 +53,7 @@ class RestablecerContra : Fragment() {
 
     }
 
-    fun isValidPassword(password: String?): Boolean {
-        val pattern: Pattern
-        val matcher: Matcher
-        val PASSWORD_PATTERN = "^(?=.*[0-9])(?=.*[A-Z])(?=.*[@#$%^&+=!])(?=\\S+$).{4,}$"
-        pattern = Pattern.compile(PASSWORD_PATTERN)
-        matcher = pattern.matcher(password)
-        return matcher.matches()
+    private fun isValidEmail(email: String?): Boolean {
+        return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
     }
 }
