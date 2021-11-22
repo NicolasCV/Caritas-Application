@@ -34,6 +34,7 @@ class MainMenu : Fragment() {
         var infoBtn : ImageView = view.findViewById(R.id.infoButton)
         var donacionesBtn : ImageView = view.findViewById(R.id.donacionesButton)
         var logoutBtn : ImageView = view.findViewById(R.id.logout)
+        var eventBtn : ImageView = view.findViewById(R.id.eventosButton)
 
         perfilBtn.setOnClickListener{
             Navigation.findNavController(view).navigate(R.id.perfilFragment)
@@ -45,6 +46,10 @@ class MainMenu : Fragment() {
 
         donacionesBtn.setOnClickListener{
             Navigation.findNavController(view).navigate(R.id.donacionesCaritas)
+        }
+
+        eventBtn.setOnClickListener{
+            Navigation.findNavController(view).navigate(R.id.eventsFragment)
         }
 
         logoutBtn.setOnClickListener{
