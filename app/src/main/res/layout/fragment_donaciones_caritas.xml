@@ -9,7 +9,7 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:id="@+id/nombre_perfil"
+        android:id="@+id/nombre_donaciones"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -23,126 +23,113 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/correoPerfil"
+        android:id="@+id/datoTipoDonante"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
         android:text="TextView"
         android:textColor="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/fechaNac"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/correoText" />
+        app:layout_constraintBottom_toTopOf="@+id/datoEstatusDonante"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:id="@+id/telCasaText"
+        android:id="@+id/fechaTextDonaciones"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:layout_marginBottom="32dp"
-        android:text="Dato 5 : "
+        android:text="Fecha:"
         app:layout_constraintBottom_toTopOf="@+id/regresar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/telCasa"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/telMovil"
+        android:id="@+id/datoEstatusDonante"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
         android:text="TextView"
         android:textColor="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/telCasa"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/telMovilText" />
+        app:layout_constraintBottom_toTopOf="@+id/datoEstatusDonante2"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:id="@+id/telMovilText"
+        android:id="@+id/datoEstatusDonante2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
-        android:text="Dato 4 : "
-        app:layout_constraintBottom_toTopOf="@+id/telCasaText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/telMovil"
-        app:layout_constraintHorizontal_bias="0.5"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/datoImporte"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/importeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="32dp"
+        android:text="Importe:"
+        app:layout_constraintBottom_toTopOf="@+id/fechaTextDonaciones"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/fechaNacText"
+        android:id="@+id/estatusText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:layout_marginBottom="32dp"
-        android:text="Dato 2 : "
-        app:layout_constraintBottom_toTopOf="@+id/generoText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/fechaNac"
-        app:layout_constraintHorizontal_bias="0.5"
+        android:text="Estatus Donante:"
+        app:layout_constraintBottom_toTopOf="@+id/ultimoDonativoText"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/telCasa"
+        android:id="@+id/datoFechaDonaciones"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
         android:text="TextView"
         android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/regresar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/telCasaText" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:id="@+id/generoText"
+        android:id="@+id/ultimoDonativoText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:layout_marginBottom="32dp"
-        android:text="Dato 3 : "
-        app:layout_constraintBottom_toTopOf="@+id/telMovilText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/genero"
-        app:layout_constraintHorizontal_bias="0.5"
+        android:text="Ultimo Donativo"
+        android:textAllCaps="true"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/importeText"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/genero"
+        android:id="@+id/tipoDonanteText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:layout_marginBottom="32dp"
-        android:text="TextView"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/telMovil"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/generoText" />
-
-    <TextView
-        android:id="@+id/correoText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:text="Dato1 : "
-        app:layout_constraintBottom_toTopOf="@+id/fechaNacText"
-        app:layout_constraintEnd_toStartOf="@+id/correoPerfil"
-        app:layout_constraintHorizontal_bias="0.5"
+        android:text="Tipo Donante:"
+        app:layout_constraintBottom_toTopOf="@+id/estatusText"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/fechaNac"
+        android:id="@+id/datoImporte"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
         android:text="TextView"
         android:textColor="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/genero"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/fechaNacText" />
+        app:layout_constraintBottom_toTopOf="@+id/datoFechaDonaciones"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/graphPrueba"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="32dp"
@@ -150,10 +137,11 @@
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
         android:src="@drawable/baseline_bar_chart_24"
-        app:layout_constraintBottom_toTopOf="@+id/correoText"
+        app:layout_constraintBottom_toTopOf="@+id/tipoDonanteText"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombre_perfil" />
+        app:layout_constraintTop_toBottomOf="@+id/nombre_donaciones" />
 
     <Button
         android:id="@+id/regresar"

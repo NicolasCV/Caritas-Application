@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import androidx.navigation.Navigation
 
 class DonacionesCaritas : Fragment() {
@@ -33,6 +34,29 @@ class DonacionesCaritas : Fragment() {
             Navigation.findNavController(view).navigate(R.id.mainMenu)
         }
 
+        var nombre : TextView = view.findViewById(R.id.nombre_donaciones)
+
+        var tipoDonante : TextView = view.findViewById(R.id.datoTipoDonante)
+        var estatusDonante : TextView = view.findViewById(R.id.datoEstatusDonante)
+        var importe : TextView = view.findViewById(R.id.datoImporte)
+        var fechaImporte : TextView = view.findViewById(R.id.datoFechaDonaciones)
+
+        var name : String = "Jose"
+        var apellido : String = "Lopez"
+        var apellido2 : String = "Martinez"
+        var finalName : String = name + " " + apellido + " " + apellido2
+
+
+        var hardcode1 : String = "Moral"
+        var hardcode2 : String = "Activo"
+        var hardcode3 : String = "$313.13"
+        var hardcode4 : String = "08/12/2021"
+
+        nombre.setText(finalName)
+        estatusDonante.setText(hardcode1)
+        tipoDonante.setText(hardcode2)
+        importe.setText(hardcode3)
+        fechaImporte.setText(hardcode4)
 
     }
 
