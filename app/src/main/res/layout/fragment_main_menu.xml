@@ -47,7 +47,7 @@
         android:layout_width="190dp"
         android:layout_height="187dp"
         android:scaleType="fitCenter"
-        android:src="@android:drawable/ic_menu_revert"
+        android:src="@drawable/_logoutbutton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.932"
         app:layout_constraintStart_toStartOf="parent"
