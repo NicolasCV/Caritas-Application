@@ -61,6 +61,7 @@ class FeedFragment : Fragment() {
     }
 
     private val url = "https://www.caritas.org.mx/feed"
+    //private val url = "https://www.caritas.org.mx/area/eventos/feed/"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -120,42 +121,7 @@ class FeedFragment : Fragment() {
 
         fetchFeed(parser)
 
-
-
-
-
-
-        /*
-        viewLifecycleOwner.lifecycleScope.launch {
-            try {
-                val channel = parser.getChannel(url)
-                //do something
-                if (channel != null) {
-
-                    adapter = ArticleAdapter(channel.articles)
-                    recyclerView.adapter = adapter
-                    adapter.notifyDataSetChanged()
-                    progressBar.visibility = View.GONE
-                    swipeLayout.isRefreshing = false
-
-                }
-                swipeLayout.canChildScrollUp()
-                swipeLayout.setOnRefreshListener {
-                    adapter.clearArticles()
-                    swipeLayout.isRefreshing = true
-
-                }
-
-            } catch (e: Exception) {
-                e.printStackTrace()
-            }
-
-         */
-
-
-
-
-        }
+    }
 
 
 
