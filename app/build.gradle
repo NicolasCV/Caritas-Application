@@ -50,6 +50,7 @@ dependencies {
 
     implementation("androidx.navigation:navigation-fragment-ktx:2.3.5")
     implementation("androidx.navigation:navigation-ui-ktx:2.3.5")
+    implementation(files("libs/mysql-connector-java-8.0.27.jar", "libs/mysql-connector-java-8.0.27.jar"))
     // Feature module Support
     implementation("androidx.navigation:navigation-dynamic-features-fragment:2.3.5")
 
