@@ -10,12 +10,16 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import androidx.navigation.Navigation
+import android.content.Intent
+import android.net.Uri
+
 
 class MainMenu : Fragment() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
 
     }
 
@@ -35,6 +39,8 @@ class MainMenu : Fragment() {
         var donacionesBtn : ImageView = view.findViewById(R.id.donacionesButton)
         var logoutBtn : ImageView = view.findViewById(R.id.logout)
         var eventBtn : ImageView = view.findViewById(R.id.eventosButton)
+        var webBtn : ImageView = view.findViewById(R.id.webButton)
+        val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.caritas.org.mx"))
 
         perfilBtn.setOnClickListener{
             Navigation.findNavController(view).navigate(R.id.perfilFragment)
@@ -50,6 +56,10 @@ class MainMenu : Fragment() {
 
         eventBtn.setOnClickListener{
             Navigation.findNavController(view).navigate(R.id.eventsFragment)
+        }
+
+        webBtn.setOnClickListener{
+            startActivity(browserIntent)
         }
 
         logoutBtn.setOnClickListener{

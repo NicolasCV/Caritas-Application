@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.072"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/donarButton"
+        app:layout_constraintTop_toTopOf="@+id/webButton"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
@@ -54,7 +54,7 @@
         app:layout_constraintTop_toBottomOf="@+id/donacionesButton" />
 
     <ImageButton
-        android:id="@+id/donarButton"
+        android:id="@+id/webButton"
         android:layout_width="190dp"
         android:layout_height="187dp"
         android:scaleType="fitCenter"
@@ -75,5 +75,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.932"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/donarButton" />
+        app:layout_constraintTop_toBottomOf="@+id/webButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -29,9 +29,15 @@ class MenuInvitados : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         var infoBtn : ImageView = view.findViewById(R.id.infoButton)
+        var eventBtn : ImageView = view.findViewById(R.id.eventosButton)
 
         infoBtn.setOnClickListener {
             Navigation.findNavController(view).navigate(R.id.feedFragment)
         }
+
+        eventBtn.setOnClickListener{
+            Navigation.findNavController(view).navigate(R.id.eventsFragment)
+        }
+
     }
 }
