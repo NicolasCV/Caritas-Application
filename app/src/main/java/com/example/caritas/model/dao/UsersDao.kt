@@ -17,6 +17,15 @@ interface UsersDao {
     @Query(value = "SELECT * FROM user WHERE mail LIKE :mail LIMIT 1")
     fun displayUser(mail: String): User
 
+    @Query()
+    fun getPerfil()
+
+    @Query()
+    fun saveChangesPerfil()
+
+    @Query()
+    fun getDonaciones()
+
     // Solo para pruebas
     @Insert
     fun insertUser(user: User)
