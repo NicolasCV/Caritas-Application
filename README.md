@@ -1,30 +1,32 @@
 # Caritas-Application
-## Equipo 2
-
-Nicolás Cárdenas Valdez A01114959
+Bienvenidos, este repositorio contiene el codigo fuente para la aplicacion Android que se desarrollo durante este semestre en colaboracion con la institucion Caritas de Monterrey. Este 'ReadMe.md' busca ser una guia de instalacion para cualquier desarrollador que busque utilizar o seguir con el desarrollo de esta
 
 
-Carlos Sevilla Silva A00826925
 
+Esta aplicación Android que ayudará a los donantes a ver su cantidad total donada a Caritas cuando lo desee. También tendrá la opción de ver eventos futuros de la organización, así como información general de esta. También podrá ver datos generales de su perfil y, en un futuro, poder donar desde la aplicación.
 
-Andrés Limón Calleja A01552116
-
-
-Iván David Manzano A01029111
+Para ver la cantidad donada se hará uso de una base de datos, debido a que no se pudo establecer un ambiente similar al de ejecucion, se realizo la base de datos dentro de la aplicacion Android. Sin embargo, en un ambiente donde se busque publicar la aplicacion, se requiere un servidor cifrado para almacenar la información que contendrá la base de datos. 
 
 
 
 
+##Instrucciones de Instalacion
 
-Este repositorio contiene la aplicacion que se desarrollo para la institucion Caritas de Monterrey
+Dentro del repositorio, en la carpeta de documentos dentro de la 'main' branch, existe una carpeta con el nombre 'Documentos'
 
-La aplicacion busca permitir a los donadores accesar sus estadisticas sobre las donaciones que han realizado e igual accesar un feed de la pagina web para leer noticias sobre las diferentes partes de la institucion
-
-Toda la documentacion apropiada se anexara al final del proyecto
+Dentro de esta existe el manual de instalacion y el manual de usuario con todas las intruccione necesarias para echar andar la aplicacion o para solamente instalarla. Dentro de los documentos vienen todos los requisitos y instrucciones paso a paso para instalarla
 
 
-##Como echar a andar el proyecto:
+#Contribudores
+##Equipo 2
 
-Ya que el proyecto sigue en desarrollo no se tiene la aplicacion completa exportada por lo tanto debe clonar el repositorio y abrir el proyecto en Android Studio y darle **FILE > EXPORT > EXPORT APK**, el APK se debe correr en mandar a un dispositivo Android, instalar y correr. Tambien puede correr la aplicacion dentro de Android Studio por medio de un AVD (Android Virtual Device)
+Nicolás Cárdenas Valdez A01114959@itesm.mx - Android Developer
 
-Actualmente se desconoce como nos conectaremos al backend por lo tanto no hay instrucciones ni algun tipo de conexion aun.
+
+Carlos Sevilla Silva A00826925@itesm.mx - Android Developer
+
+
+Andrés Limón Calleja A01552116@itesm.mx - Scrum Master
+
+
+Iván David Manzano A01029111@itesm.mx - DB master
