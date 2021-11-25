@@ -14,7 +14,8 @@
         android:scaleType="fitCenter"
         android:src="@drawable/_botonnoticias"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.072"
+        app:layout_constraintEnd_toStartOf="@+id/webButton"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/webButton"
         tools:ignore="SpeakableTextPresentCheck" />
@@ -26,7 +27,8 @@
         android:scaleType="fitCenter"
         android:src="@drawable/_perfil"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.072"
+        app:layout_constraintEnd_toStartOf="@+id/donacionesButton"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/donacionesButton"
         tools:ignore="SpeakableTextPresentCheck" />
@@ -38,7 +40,8 @@
         android:scaleType="fitCenter"
         android:src="@drawable/_eventos"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.072"
+        app:layout_constraintEnd_toStartOf="@+id/logout"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/donacionesButton" />
 
@@ -49,7 +52,7 @@
         android:scaleType="fitCenter"
         android:src="@drawable/_logoutbutton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.932"
+        app:layout_constraintHorizontal_bias="0.97"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/donacionesButton" />
 
@@ -61,7 +64,7 @@
         android:src="@drawable/_visitarpagina"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.932"
+        app:layout_constraintHorizontal_bias="0.97"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.04000002" />
@@ -73,7 +76,7 @@
         android:scaleType="fitCenter"
         android:src="@drawable/_historial"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.932"
+        app:layout_constraintHorizontal_bias="0.97"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/webButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>
