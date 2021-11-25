@@ -1,5 +1,5 @@
 # Caritas-Application
-Bienvenidos, este repositorio contiene el codigo fuente para la aplicacion Android que se desarrollo durante este semestre en colaboracion con la institucion Caritas de Monterrey. Este 'ReadMe.md' busca ser una guia de instalacion para cualquier desarrollador que busque utilizar o seguir con el desarrollo de esta
+Bienvenidos, este repositorio contiene el codigo fuente para la aplicacion Android que se desarrollo durante este semestre en colaboracion con la institucion Caritas de Monterrey. Este `ReadMe.md` busca ser una guia de instalacion para cualquier desarrollador que busque utilizar o seguir con el desarrollo de esta
 
 
 
@@ -10,15 +10,15 @@ Para ver la cantidad donada se hará uso de una base de datos, debido a que no s
 
 
 
-##Instrucciones de Instalacion
+## Instrucciones de Instalacion
 
-Dentro del repositorio, en la carpeta de documentos dentro de la 'main' branch, existe una carpeta con el nombre 'Documentos'
+Dentro del repositorio, en la carpeta de documentos dentro de la `main` branch, existe una carpeta con el nombre `Documentos`
 
 Dentro de esta existe el manual de instalacion y el manual de usuario con todas las intruccione necesarias para echar andar la aplicacion o para solamente instalarla. Dentro de los documentos vienen todos los requisitos y instrucciones paso a paso para instalarla
 
 
-#Contribudores
-##Equipo 2
+# Contribudores
+## Equipo 2
 
 Nicolás Cárdenas Valdez A01114959@itesm.mx - Android Developer
 
