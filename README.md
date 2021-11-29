@@ -14,7 +14,7 @@ Para ver la cantidad donada se hará uso de una base de datos, debido a que no s
 
 Dentro del repositorio, en la carpeta de documentos dentro de la `main` branch, existe una carpeta con el nombre `Documentos` donde se puede encotnrar informacion mas detallada a la siguiente.
 
-Nuestra aplicación fue desarrollada con Android Studio utilizando Android 6.0 (Marshmallow). Para instalar la aplicación en un dispositivo móvil es tan simple como descargar el archivo .apk en la carpeta de documentos e instalarla en tu dispositivo móvil. Probablemente tendrás que darle permisos a la aplicación que la este intentando instalar, el teléfono proveerá instrucciones de cómo hacer esto.
+Nuestra aplicación fue desarrollada con Android Studio utilizando Android 6.0 (Marshmallow). Para instalar la aplicación en un dispositivo móvil es tan simple como descargar el archivo .apk en la carpeta de documentos e instalarla en tu dispositivo móvil. Probablemente tendrás que darle permisos a la aplicación que la este intentando instalar, el dispositivo proveerá instrucciones de cómo hacer esto.
 Para hacer modificaciones a la aplicación es necesario descargar el código fuente en un zip y extraer todo en una carpeta. Esta, al momento de intentar abrirla con Android Studio, será detectada automáticamente como un proyecto y se empezará a construir todo el ambiente. De aquí en adelante se le puede hacer todas las modificaciones necesarias.
 
 Aun es necesario que se implementen las funciones de la base de datos, esto se podrá implementar de la siguiente manera:
