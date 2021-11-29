@@ -3,9 +3,9 @@ Bienvenidos, este repositorio contiene el codigo fuente para la aplicacion Andro
 
 
 
-Esta aplicación Android que ayudará a los donantes a ver su cantidad total donada a Caritas cuando lo desee. También tendrá la opción de ver eventos futuros de la organización, así como información general de esta. También podrá ver datos generales de su perfil y, en un futuro, poder donar desde la aplicación.
+Esta sera una Aplicación de Android que ayudará a los donantes a ver su cantidad total donada a Caritas cuando lo desee. También tendrá la opción de ver eventos futuros de la organización, así como el feed de noticias que Cáritas publique. También podrá ver datos generales de su perfil y tendrá una liga que lleve a la página de caritas desde la aplicación.
 
-Para ver la cantidad donada se hará uso de una base de datos, debido a que no se pudo establecer un ambiente similar al de ejecucion, se realizo la base de datos dentro de la aplicacion Android. Sin embargo, en un ambiente donde se busque publicar la aplicacion, se requiere un servidor cifrado para almacenar la información que contendrá la base de datos. 
+Para ver la cantidad donada se hará uso de una base de datos, debido a que no se pudo establecer un ambiente similar al de ejecucion, se realizo la base de datos dentro de la aplicacion Android. Sin embargo, en un ambiente donde se busque publicar la aplicacion, se requiere un servidor cifrado para almacenar la información que contendrá la base de datos. [Por restriccion de tiempo, la conexion con la base de datos local tampoco fue exitosa]
 
 
 
