@@ -14,7 +14,7 @@ Para ver la cantidad donada se hará uso de una base de datos, debido a que no s
 
 Dentro del repositorio, en la carpeta de documentos dentro de la `main` branch, existe una carpeta con el nombre `Documentos`
 
-Dentro de esta existe el manual de instalacion y el manual de usuario con todas las intruccione necesarias para echar andar la aplicacion o para solamente instalarla. Dentro de los documentos vienen todos los requisitos y instrucciones paso a paso para instalarla.
+Dentro de esta existe el manual de instalacion y el manual de usuario con todas las intrucciones necesarias para echar andar la aplicacion o para solamente instalarla. Dentro de los documentos vienen todos los requisitos e instrucciones paso a paso para instalarla.
 
 
 # Contribudores
