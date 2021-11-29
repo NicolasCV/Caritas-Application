@@ -12,9 +12,18 @@ Para ver la cantidad donada se hará uso de una base de datos, debido a que no s
 
 ## Instrucciones de Instalacion
 
-Dentro del repositorio, en la carpeta de documentos dentro de la `main` branch, existe una carpeta con el nombre `Documentos`
+Dentro del repositorio, en la carpeta de documentos dentro de la `main` branch, existe una carpeta con el nombre `Documentos` donde se puede encotnrar informacion mas detallada a la siguiente.
 
-Dentro de esta existe el manual de instalacion y el manual de usuario con todas las intrucciones necesarias para echar andar la aplicacion o para solamente instalarla. Dentro de los documentos vienen todos los requisitos e instrucciones paso a paso para instalarla.
+Nuestra aplicación fue desarrollada con Android Studio utilizando Android 6.0 (Marshmallow). Para instalar la aplicación en un dispositivo móvil es tan simple como descargar el archivo .apk en la carpeta de documentos e instalarla en tu dispositivo móvil. Probablemente tendrás que darle permisos a la aplicación que la este intentando instalar, el teléfono proveerá instrucciones de cómo hacer esto.
+Para hacer modificaciones a la aplicación es necesario descargar el código fuente en un zip y extraer todo en una carpeta. Esta, al momento de intentar abrirla con Android Studio, será detectada automáticamente como un proyecto y se empezará a construir todo el ambiente. De aquí en adelante se le puede hacer todas las modificaciones necesarias.
+
+Aun es necesario que se implementen las funciones de la base de datos, esto se podrá implementar de la siguiente manera:
+La aplicación está pensada para que cuando se tenga una API de Cáritas, sea muy simple pedir los datos del usuario y desplegarlos. La parte que sí se pudo implementar en el back-end fue el parseo de la información otorgada del feed.
+
+Dentro de Android Studio, en el fragmento “Login.kt” se puede hacer la conexión con el API para enviar los datos introducidos en los campos de correo y contraseña para hacer la autenticación de usuario. En los fragmentos “PerfilFragment.kt” y “DonacionesCaritas.kt” se puede usar el API para, con los datos de usuario introducidos al inicio, extraer los datos necesarios como String y desplegarlos en los campos correspondientes. Por último, para editar información personal desde la aplicación, si así lo desea caritas, se puede implementar esta función dentro del fragmento “EditarPerfil.kt”
+
+
+
 
 
 # Contribudores
