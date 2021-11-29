@@ -1,4 +1,4 @@
-# Caritas-Application
+# MiCaritas-Application
 Bienvenidos, este repositorio contiene el codigo fuente para la aplicacion Android que se desarrollo durante este semestre en colaboracion con la institucion Caritas de Monterrey. Este `ReadMe.md` busca ser una guia de instalacion para cualquier desarrollador que busque utilizar o seguir con el desarrollo de esta.
 
 
