@@ -1,5 +1,7 @@
 package com.example.caritas
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,6 +10,8 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.navigation.Navigation
+import com.example.caritas.model.database.DbEntryPoint
+import com.example.caritas.model.entities.User
 
 class PerfilFragment : Fragment() {
 
@@ -27,11 +31,13 @@ class PerfilFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        var edit : Button = view.findViewById(R.id.editar)
+        val dbInstance = DbEntryPoint.getDatabase(requireContext())
+        val userDao = dbInstance.userDao()
 
-        edit.setOnClickListener{
-            Navigation.findNavController(view).navigate(R.id.editarPerfil)
-        }
+        val currEmail = getCurrSession()
+
+        val currUser = userDao.displayUser(currEmail)
+        dbInstance.close()
 
 
         var nombre : TextView = view.findViewById(R.id.nombre_perfil)
@@ -42,17 +48,18 @@ class PerfilFragment : Fragment() {
         var telMovil : TextView = view.findViewById(R.id.telMovil)
         var telCasa : TextView = view.findViewById(R.id.telCasa)
 
-        var name : String = "Jose"
-        var apellido : String = "Lopez"
-        var apellido2 : String = "Martinez"
+        var name : String = currUser.name
+        var apellido : String = currUser.apellidoPat
+        var apellido2 : String = currUser.apellidoMat
         var finalName : String = name + " " + apellido + " " + apellido2
 
 
-        var hardcode1 : String = "joloma@gmail.com"
-        var hardcode2 : String = "08/12/2000"
-        var hardcode3 : String = "Hombre"
-        var hardcode4 : String = "123-123-1234"
-        var hardcode5 : String = "123-456-7890"
+        var hardcode1 : String = currEmail
+        var hardcode2 : String = currUser.fechaDeNacimiento
+        var hardcode3 : String = currUser.gender
+        var hardcode4 : String = currUser.telefonoMovil.toString()
+        var hardcode5 : String = currUser.telefonoCasa.toString()
+
 
         nombre.setText(finalName)
         correo.setText(hardcode1)
@@ -62,5 +69,19 @@ class PerfilFragment : Fragment() {
         telCasa.setText(hardcode5)
 
 
+        var edit : Button = view.findViewById(R.id.editar)
+
+        edit.setOnClickListener{
+            Navigation.findNavController(view).navigate(R.id.editarPerfil)
+        }
+
+
     }
+
+    private fun getCurrSession() : String {
+        var pref : SharedPreferences = requireActivity().getPreferences(Context.MODE_PRIVATE);
+        return pref.getString("sessionEmail","").toString()
+    }
+
 }
+

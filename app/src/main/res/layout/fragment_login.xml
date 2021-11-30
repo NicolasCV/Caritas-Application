@@ -54,6 +54,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/rounded_edit_text"
+        android:maxLength="40"
         android:minHeight="48dp"
         android:padding="5dip"
         android:textSize="20sp"
@@ -64,13 +65,14 @@
 
     <EditText
         android:id="@+id/contraInput"
-        android:inputType="textPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/rounded_edit_text"
+        android:inputType="textPassword"
+        android:maxLength="20"
         android:minHeight="48dp"
         android:padding="5dip"
         android:textSize="20sp"
