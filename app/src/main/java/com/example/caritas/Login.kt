@@ -14,6 +14,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.navigation.Navigation
+import com.example.caritas.model.database.DbEntryPoint
+import com.example.caritas.model.entities.User
+import com.example.caritas.model.entities.UserLogin
 
 
 class Login : Fragment() {
@@ -27,8 +30,32 @@ class Login : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        var pref : SharedPreferences = requireActivity().getPreferences(Context.MODE_PRIVATE);
+        var pref : SharedPreferences = requireActivity().getPreferences(Context.MODE_PRIVATE)
+
+        var isFirstRun : Boolean = pref.getBoolean("FIRSTRUN", true)
         val editor = pref.edit()
+
+        if (isFirstRun) {
+            //Inicializar base de datos
+            val userToAdd = User(1,"Jose","Lopez","Martinez","joloma@gmail.com",21,"H","21-08-1998",6621235367,6621234369,1,2,333.3,"21-08-2021")
+            val userToAdd2 = User(2,"Carlos","Ramirez","Valdez","carava@gmail.com",29,"H","20-12-2000",8821231237,7721234123,2,3,618.5,"22-09-2021")
+
+            val loginToAdd = UserLogin(1,"joloma@gmail.com","contra")
+            val loginToAdd2 = UserLogin(2,"carava@gmail.com","contra123")
+
+            val dbInstance = DbEntryPoint.getDatabase(requireContext())
+            val userDao = dbInstance.userDao()
+
+            userDao.insertUser(userToAdd)
+            userDao.insertUser(userToAdd2)
+            userDao.insertMailPass(loginToAdd)
+            userDao.insertMailPass(loginToAdd2)
+
+            dbInstance.close()
+
+            editor.putBoolean("FIRSTRUN", false)
+            editor.commit()
+        }
 
     }
 
@@ -42,6 +69,7 @@ class Login : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
 
         var ingresar : Button = view.findViewById(R.id.Ingresar)
         var restContra : Button = view.findViewById(R.id.clickaqui)
@@ -61,13 +89,26 @@ class Login : Fragment() {
 
         ingresar.setOnClickListener{
 
-            if(contraForm.text.toString() != "" && isValidEmail(emailForm.text.toString())){
+            val emailIngresado : String = emailForm.text.toString()
+            val contraIngresada : String = contraForm.text.toString()
 
-                if(recuerdame.isChecked){
-                    saveValues()
+            if( contraIngresada != "" && isValidEmail(emailIngresado) ){
+
+                if(validCredentials(emailIngresado,contraIngresada)){
+
+                    loadSession(emailIngresado)
+
+                    if(recuerdame.isChecked){
+                        saveValues()
+                    }
+
+                    Navigation.findNavController(view).navigate(R.id.mainMenu)
+
                 }
 
-                Navigation.findNavController(view).navigate(R.id.mainMenu)
+                else{
+                    Toast.makeText(activity, "Correo o contrasena incorrectos", Toast.LENGTH_SHORT).show()
+                }
             }
 
             else{
@@ -85,7 +126,32 @@ class Login : Fragment() {
 
     }
 
+    private fun validCredentials(email: String, password: String) : Boolean {
+        val dbInstance = DbEntryPoint.getDatabase(requireContext())
+        val userDao = dbInstance.userDao()
+        val userlogin = userDao.findByMail(email)
 
+
+
+        dbInstance.close()
+
+        if(userlogin !== null){
+            if(userlogin.password == password) {
+                return true
+            }
+        }
+
+        return false
+    }
+
+    private fun loadSession(currMail: String) {
+        var pref : SharedPreferences = requireActivity().getPreferences(Context.MODE_PRIVATE);
+        val editor = pref.edit()
+
+        editor.putString("sessionEmail",currMail)
+
+        editor.commit()
+    }
     private fun loadValues() {
 
         var pref : SharedPreferences = requireActivity().getPreferences(Context.MODE_PRIVATE);
@@ -97,7 +163,6 @@ class Login : Fragment() {
         contraForm.setText(contra)
 
     }
-
 
     private fun saveValues() {
         emaily = emailForm.text.toString()
