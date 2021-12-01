@@ -1,5 +1,7 @@
 package com.example.caritas
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -30,6 +32,8 @@ class MenuInvitados : Fragment() {
 
         var infoBtn : ImageView = view.findViewById(R.id.infoButton)
         var eventBtn : ImageView = view.findViewById(R.id.eventosButton)
+        var webBtn : ImageView = view.findViewById(R.id.webButton2)
+        val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.caritas.org.mx"))
 
         infoBtn.setOnClickListener {
             Navigation.findNavController(view).navigate(R.id.feedFragment)
@@ -37,6 +41,10 @@ class MenuInvitados : Fragment() {
 
         eventBtn.setOnClickListener{
             Navigation.findNavController(view).navigate(R.id.eventsFragment)
+        }
+
+        webBtn.setOnClickListener{
+            startActivity(browserIntent)
         }
 
     }
